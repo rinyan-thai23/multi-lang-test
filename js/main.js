@@ -1,15 +1,19 @@
-// 言語データを保持するグローバル変数
+// --- 多言語対応の処理 ---
+
 let translations = {};
 
-// ページが読み込まれたときに言語データを読み込む
+// ページ読み込み完了時に実行
 document.addEventListener('DOMContentLoaded', async () => {
-    await loadTranslations(); // 全ての言語データを最初に読み込む
+    await loadTranslations();
     const userLang = navigator.language.split('-')[0];
-    const langToSet = translations[userLang] ? userLang : 'ja'; // 対応言語がなければ日本語に
+    const langToSet = translations[userLang] ? userLang : 'ja';
     setLanguage(langToSet);
+
+    // FAQアコーディオンの初期化処理
+    initializeFaq();
 });
 
-// 全ての言語ファイルを読み込む関数
+// 全ての翻訳ファイルを読み込む
 async function loadTranslations() {
     try {
         const jaResponse = await fetch('lang/ja.json');
@@ -21,8 +25,7 @@ async function loadTranslations() {
     }
 }
 
-
-// 指定された言語にページを更新する関数
+// 言語を設定するメインの関数
 function setLanguage(lang) {
     const langData = translations[lang];
     if (!langData) {
@@ -36,5 +39,28 @@ function setLanguage(lang) {
         if (langData[key]) {
             element.textContent = langData[key];
         }
+    });
+}
+
+// --- FAQアコーディオンの処理 ---
+
+function initializeFaq() {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            const isActive = question.classList.contains('active');
+
+            // まずすべてのアクティブクラスと高さをリセット
+            document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('active'));
+            document.querySelectorAll('.faq-answer').forEach(a => a.style.maxHeight = null);
+            
+            // クリックされたものがアクティブでなかった場合、開く
+            if (!isActive) {
+                question.classList.add('active');
+                answer.style.maxHeight = answer.scrollHeight + "px";
+            }
+        });
     });
 }
