@@ -3,29 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="pageTitle">多言語テストサイト</title>
+    <title data-i18n="pageTitle">Gemini Café</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <header>
+    <header class="site-header">
+        <div class="container">
+            <h1 class="site-logo" data-i18n="pageTitle">Gemini Café</h1>
             <nav class="lang-switcher">
                 <button onclick="setLanguage('ja')">日本語</button>
                 <button onclick="setLanguage('en')">English</button>
             </nav>
-        </header>
+        </div>
+    </header>
 
-        <main>
-            <img src="https://via.placeholder.com/400x200" alt="Placeholder Image" class="main-image">
-            <h1 data-i18n="mainTitle">ようこそ！</h1>
-            <p data-i18n="description">これはGitHub Pagesで動作する多言語サイトのサンプルです。ボタンをクリックして言語を切り替えてください。</p>
-        </main>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2 data-i18n="heroTitle">一杯のコーヒーが、一日を特別にする。</h2>
+                <p data-i18n="heroSubtitle">タイ・チェンライの自家焙煎豆を使用した、こだわりの一杯をお楽しみください。</p>
+            </div>
+        </section>
 
-        <footer>
-            <p data-i18n="footerText">© 2025 あなたの名前</p>
-        </footer>
-    </div>
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title" data-i18n="servicesTitle">私たちのこだわり</h2>
+                <div class="card-deck">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300x200?text=自家焙煎豆" alt="自家焙煎豆">
+                        <h3 data-i18n="service1Title">自家焙煎豆</h3>
+                        <p data-i18n="service1Desc">地元の農園から直接仕入れた新鮮な豆を、毎日丁寧に焙煎しています。</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300x200?text=手作りスイーツ" alt="手作りスイーツ">
+                        <h3 data-i18n="service2Title">手作りスイーツ</h3>
+                        <p data-i18n="service2Desc">コーヒーとの相性を第一に考えた、パティシエ特製のケーキと焼き菓子。</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300x200?text=落ち着いた空間" alt="落ち着いた空間">
+                        <h3 data-i18n="service3Title">落ち着いた空間</h3>
+                        <p data-i18n="service3Desc">読書や仕事にも最適な、Wi-Fi完備の静かで心地よい空間を提供します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery">
+             <div class="container">
+                <h2 class="section-title" data-i18n="galleryTitle">フォトギャラリー</h2>
+                <div class="photo-grid">
+                    <img src="https://via.placeholder.com/400x400?text=店内" alt="店内の様子 1">
+                    <img src="https://via.placeholder.com/400x400?text=コーヒー" alt="コーヒー">
+                    <img src="https://via.placeholder.com/400x400?text=ラテアート" alt="ラテアート">
+                    <img src="https://via.placeholder.com/400x400?text=ケーキ" alt="ケーキ">
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2 class="section-title" data-i18n="faqTitle">よくある質問</h2>
+                <div class="faq-item">
+                    <button class="faq-question" data-i18n="faq1q"></button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq1a"></p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" data-i18n="faq2q"></button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq2a"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p data-i18n="footerText">© 2025 Gemini Café. All Rights Reserved.</p>
+        </div>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>
