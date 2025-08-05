@@ -1,6 +1,19 @@
 {
-  "pageTitle": "Multi-Language Test Site",
-  "mainTitle": "Welcome!",
-  "description": "This is a sample of a multi-language site running on GitHub Pages. Click the buttons to switch languages.",
-  "footerText": "© 2025 Your Name"
+  "pageTitle": "Gemini Café",
+  "heroTitle": "One cup of coffee makes your day special.",
+  "heroSubtitle": "Enjoy a special cup brewed with our home-roasted beans from Chiang Rai, Thailand.",
+  "servicesTitle": "Our Features",
+  "service1Title": "Home-Roasted Beans",
+  "service1Desc": "We carefully roast fresh beans sourced directly from local farms every day.",
+  "service2Title": "Handmade Sweets",
+  "service2Desc": "Our pastry chef's special cakes and baked goods, designed to pair perfectly with our coffee.",
+  "service3Title": "Relaxing Atmosphere",
+  "service3Desc": "We offer a quiet and comfortable space with Wi-Fi, perfect for reading or working.",
+  "galleryTitle": "Photo Gallery",
+  "faqTitle": "Frequently Asked Questions",
+  "faq1q": "Do I need a reservation?",
+  "faq1a": "No, reservations are not required. Please feel free to stop by. However, for groups of 5 or more, calling ahead will ensure smoother seating.",
+  "faq2q": "Is there Wi-Fi?",
+  "faq2a": "Yes, we offer free Wi-Fi in the café. The password is on display, or you can ask our staff.",
+  "footerText": "© 2025 Gemini Café. All Rights Reserved."
 }
