@@ -1,42 +1,153 @@
+/* 基本設定とGoogle Fontの適用 */
 body {
-    font-family: sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    line-height: 1.7;
+    background-color: #F8F6F4; /* 少し温かみのある白 */
+    color: #4A4A4A; /* 少し柔らかい黒 */
     margin: 0;
-    padding: 20px;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 0 20px;
+}
+
+/* ヘッダーとフッター */
+.site-header, .site-footer {
+    background-color: #4B3F36; /* 濃いコーヒーブラウン */
+    color: #fff;
+    padding: 20px 0;
+}
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.site-logo {
+    margin: 0;
+    font-weight: 700;
+}
+.site-footer {
     text-align: center;
+    padding: 30px 0;
+    margin-top: 60px;
 }
 
 .lang-switcher button {
     padding: 8px 15px;
-    border: 1px solid #ddd;
-    background-color: #e9e9e9;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
     cursor: pointer;
-    margin: 0 5px;
+    margin-left: 10px;
     border-radius: 5px;
+    transition: all 0.3s ease;
 }
-
 .lang-switcher button:hover {
-    background-color: #ddd;
+    background-color: #fff;
+    color: #4B3F36;
 }
 
-.main-image {
-    max-width: 100%;
-    height: auto;
+/* セクション共通 */
+section {
+    padding: 60px 0;
+}
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #4B3F36;
+}
+
+/* ヒーローセクション */
+.hero {
+    background-color: #EFEBE7;
+    text-align: center;
+    padding: 80px 0;
+}
+.hero h2 {
+    font-size: 2.5rem;
+    margin: 0 0 10px 0;
+}
+
+/* サービス（カード）セクション */
+.card-deck {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+.card {
+    background: #fff;
     border-radius: 8px;
-    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.card h3 {
+    color: #4B3F36;
+    margin: 20px 0 10px 0;
+}
+.card p {
+    padding: 0 20px;
 }
 
-h1 {
-    color: #0056b3;
+/* ギャラリーセクション */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+.photo-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* FAQセクション */
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 15px 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    padding-right: 30px; /* アイコンのスペース */
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    color: #4A4A4A;
+}
+.faq-question::after { /* 開閉アイコン */
+    content: '+';
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+.faq-question.active::after {
+    transform: translateY(-50%) rotate(45deg);
+}
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 15px;
+}
+.faq-answer p {
+    margin: 0 0 15px 0;
 }
