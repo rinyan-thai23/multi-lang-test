@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="pageTitle">多言語テストサイト</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <nav class="lang-switcher">
+                <button onclick="setLanguage('ja')">日本語</button>
+                <button onclick="setLanguage('en')">English</button>
+            </nav>
+        </header>
+
+        <main>
+            <img src="https://via.placeholder.com/400x200" alt="Placeholder Image" class="main-image">
+            <h1 data-i18n="mainTitle">ようこそ！</h1>
+            <p data-i18n="description">これはGitHub Pagesで動作する多言語サイトのサンプルです。ボタンをクリックして言語を切り替えてください。</p>
+        </main>
+
+        <footer>
+            <p data-i18n="footerText">© 2025 あなたの名前</p>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
